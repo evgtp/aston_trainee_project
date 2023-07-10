@@ -1,24 +1,15 @@
 import { Alert, Box, Button, Container, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "../../../firebase";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../store/slices/userSlice";
-import { useAuth } from "../../../Hooks/use-auth";
 
 function SignInPage() {
   const dispatch = useDispatch();
 
-  const { isAuth } = useAuth();
-
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (isAuth) {
-      navigate("/");
-    }
-  }, [navigate]);
 
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
