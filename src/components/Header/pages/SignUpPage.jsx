@@ -2,17 +2,19 @@ import { Alert, Box, Button, Container, TextField } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createUser } from "../../../firebase";
-import { isLoggedIn } from "../../../storage/session";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../../store/slices/userSlice";
+import { useAuth } from "../../../Hooks/use-auth";
 
 function SignUpPage() {
   const dispatch = useDispatch();
 
+  const { isAuth } = useAuth();
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isLoggedIn()) {
+    if (isAuth) {
       navigate("/");
     }
   }, [navigate]);
