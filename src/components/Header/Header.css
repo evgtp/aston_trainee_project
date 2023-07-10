@@ -12,23 +12,23 @@
   left: 135px;
 }
 
-.header__auth-modul {
+.header__auth-module {
   position: absolute;
   right: 135px;
   top: 31px;
 }
 
-.auth-modul {
+.auth-module {
   display: flex;
   align-items: center;
 }
 
-.auth-modul p {
+.auth-module p {
   margin-right: 40px;
   font-weight: 500;
 }
 
-.auth-modul button {
+.auth-module button {
   background-color: #000;
   color: #fff;
   padding: 10px 20px;
@@ -41,12 +41,12 @@
   font-weight: 500;
 }
 
-.auth-modul button:hover {
+.auth-module button:hover {
   background-color: #1f4766;
   border: #1f4766 solid;
 }
 
-.auth-modul a {
+.auth-module a {
   text-decoration: none;
   color: #ffffff;
   margin-left: 40px;
@@ -57,7 +57,7 @@
   font-weight: 500;
 }
 
-.auth-modul a:hover {
+.auth-module a:hover {
   background-color: #1f4766;
   border: #1f4766 solid;
 }

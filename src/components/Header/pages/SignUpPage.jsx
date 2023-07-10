@@ -2,9 +2,13 @@ import { Alert, Box, Button, Container, TextField } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createUser } from "../../../firebase";
-import { isLoggedIn, startSession } from "../../../storage/session";
+import { isLoggedIn } from "../../../storage/session";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../../store/slices/userSlice";
 
 function SignUpPage() {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,8 +36,15 @@ function SignUpPage() {
 
     setError("");
     try {
-      let registerResponse = await createUser(email, password);
-      startSession(registerResponse.user);
+      await createUser(email, password).then(({ user }) => {
+        dispatch(
+          setUser({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken,
+          })
+        );
+      });
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -82,7 +93,7 @@ function SignUpPage() {
           Register
         </Button>
         <Box sx={{ mt: 2 }}>
-          Already have an account? <Link to="/signin">Login</Link>
+          Already have an account? <Link to="/sign-in">Login</Link>
         </Box>
       </Box>
     </Container>

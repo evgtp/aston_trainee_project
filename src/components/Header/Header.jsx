@@ -1,44 +1,20 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Logo from "../../assets/image/logo.png";
-import AuthModul from "./AuthModul";
+import AuthModule from "./AuthModule";
 import HeaderNav from "./HeaderNav";
-import { useState, useEffect } from "react";
-import { getSession, isLoggedIn } from "../../storage/session";
 
 import "./Header.css";
 
 function Header() {
-  const [email, setEmail] = useState("");
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isLoggedIn()) {
-    }
-    const session = getSession();
-    setEmail(session.email);
-  }, [navigate]);
-
-  return !isLoggedIn() ? (
+  return (
     <>
       <header className="header">
         <Link to="/" className="header__logo">
-          <img src={Logo} alt="Логотип" />
-        </Link>
-        <div className="header__auth-modul">
-          <AuthModul />
-        </div>
-      </header>
-      <Outlet />
-    </>
-  ) : (
-    <>
-      <header className="header">
-        <Link to="/" className="header__logo">
-          <img src={Logo} alt="Логотип" />
+          <img src={Logo} alt="Logo" />
         </Link>
         <HeaderNav />
-        <div className="header__auth-modul">
-          <AuthModul />
+        <div className="header__auth-module">
+          <AuthModule />
         </div>
       </header>
       <Outlet />
