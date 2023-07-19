@@ -2,9 +2,9 @@ import { Alert, Box, Button, Container, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signInUser } from "../../../firebase";
+import { signInUser } from "../../firebase";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../../store/slices/userSlice";
+import { setUser } from "../../store/slices/userSlice";
 
 function SignInPage() {
   const dispatch = useDispatch();
@@ -32,8 +32,16 @@ function SignInPage() {
             token: user.accessToken,
           })
         );
+        navigate("/");
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            email: user.email,
+            id: user.uid,
+            token: user.accessToken,
+          })
+        );
       });
-      navigate("/");
     } catch (error) {
       setError(error.message);
     }
@@ -41,7 +49,7 @@ function SignInPage() {
 
   return (
     <div className="sign-in">
-      <h1>Login</h1>
+      <h1 style={{ textAlign: "center" }}>Login</h1>
       <Container maxWidth="xs" sx={{ mt: 2 }}>
         {error && (
           <Alert severity="error" sx={{ my: 2 }}>

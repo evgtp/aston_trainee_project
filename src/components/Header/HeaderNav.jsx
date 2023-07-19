@@ -8,8 +8,8 @@ function HeaderNav() {
 
   return isAuth ? (
     <div className="header__nav">
-      <NavLink to="/favorites">Избранное</NavLink>
-      <NavLink to="/history">История</NavLink>
+      <NavLink to="/favorites">Favorites</NavLink>
+      <NavLink to="/history">History</NavLink>
     </div>
   ) : (
     <></>
