@@ -1,21 +1,18 @@
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 38px;
-  position: relative;
   height: 112px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
+  width: 1170px;
+  margin-left: 260px;
 }
 
 .header__logo {
-  position: absolute;
-  left: 135px;
 }
 
 .header__auth-module {
-  position: absolute;
-  right: 135px;
-  top: 31px;
+  margin-top: 35px;
 }
 
 .auth-module {

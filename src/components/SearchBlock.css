@@ -1,0 +1,208 @@
+.search-block {
+  display: flex;
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 70px;
+  width: 1170px;
+  height: 100px;
+}
+
+.search-block p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 20px;
+}
+
+.search-block__status {
+  position: absolute;
+  right: 195px;
+  width: 270px;
+  height: 71px;
+}
+
+.search-block__status select {
+  height: 50px;
+}
+
+.search-block__status p {
+  margin-bottom: 26.5px;
+}
+
+.search-block__species {
+  position: absolute;
+  right: 500px;
+}
+
+.search-block__species input {
+  background: rgba(162, 162, 162, 0.1);
+  border: 1px solid rgba(162, 162, 162, 0.6);
+  border-radius: 5px;
+  width: 270px;
+  height: 50px;
+  padding-left: 13px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.search-block__species input:focus {
+  border: 1px solid #00a3ff !important;
+}
+
+.search-block__species input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.search-block__species input::placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #00000066;
+}
+
+.search-block__name {
+  position: absolute;
+}
+
+.search-block__name p {
+  margin-bottom: 20px;
+}
+
+.search-block__name input {
+  background: #a2a2a21a;
+  border: 1px solid rgba(162, 162, 162, 0.6);
+  border-radius: 5px;
+  width: 370px;
+  height: 50px;
+  margin-bottom: 35px;
+  outline: none;
+  padding-left: 13px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.search-block__name input:focus {
+  border: 1px solid #00a3ff !important;
+}
+
+.search-block__name input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.search-block__name input::placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #00000066;
+}
+
+.search-block input:hover {
+  background: rgba(162, 162, 162, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+
+.custom-select__control {
+  background: #a2a2a21a !important;
+  width: 245px !important;
+  height: 50px !important;
+  min-height: 35px !important;
+  position: absolute !important;
+  top: -7px !important;
+  border-radius: 5px !important;
+  z-index: 10;
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.custom-select__placeholder {
+  width: 270px !important;
+  height: 36px !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  line-height: 15px !important;
+  color: #00000066 !important;
+  padding-top: 10px;
+  margin: 0 !important;
+}
+
+.custom-select__menu {
+  position: absolute !important;
+  top: 40px !important;
+  width: 150px !important;
+  height: 180px !important;
+  right: 0 !important;
+  background: #f7f7f7 !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 5px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 17px !important;
+
+  color: #000000 !important;
+}
+
+.custom-select__menu-list {
+  width: 150px !important;
+  height: 200px !important;
+}
+
+.custom-select__menu-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.custom-select__option {
+  cursor: pointer !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.custom-select__option:last-child {
+  width: 148px !important;
+  height: 41.8px !important;
+  border-radius: 0 0 4px 4px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.inputFocus {
+  border: 1px solid #00a3ff !important;
+  outline: none !important;
+}
+
+.custom-select__indicator-separator {
+  display: none !important;
+}
+
+.custom-select__indicator svg {
+  display: none;
+}
+
+.search-block__search-button input {
+  position: absolute;
+  right: 0;
+  width: 150px;
+  height: 50px;
+  bottom: 16px;
+  border: 1px solid #00a3ff;
+  border-radius: 5px;
+  background-color: #00a3ff;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+.search-block__search-button input:hover {
+  background-color: #008bda;
+  border: 1px solid #00a3ff;
+  cursor: pointer;
+}

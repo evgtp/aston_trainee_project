@@ -1,9 +1,9 @@
 import { Alert, Box, Button, Container, TextField } from "@mui/material";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
-import { createUser } from "../../../firebase";
+import { createUser } from "../../firebase";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../../store/slices/userSlice";
+import { setUser } from "../../store/slices/userSlice";
 
 function SignUpPage() {
   const dispatch = useDispatch();
@@ -46,7 +46,7 @@ function SignUpPage() {
 
   return (
     <Container maxWidth="xs" sx={{ mt: 2 }}>
-      <h1>Register</h1>
+      <h1 style={{ textAlign: "center" }}>Register</h1>
       {error && (
         <Alert severity="error" sx={{ my: 2 }}>
           {error}

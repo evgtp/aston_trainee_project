@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import "./Header.css";
+import "./../Header/Header.css";
 import { useAuth } from "../../Hooks/use-auth";
 import { removeUser } from "../../store/slices/userSlice";
 
@@ -17,7 +17,13 @@ function AuthModule() {
   ) : (
     <div className="auth-module">
       <p>{email}</p>
-      <button onClick={() => dispatch(removeUser())}>Logout</button>
+      <button
+        onClick={() => {
+          dispatch(removeUser());
+        }}
+      >
+        Logout
+      </button>
     </div>
   );
 }

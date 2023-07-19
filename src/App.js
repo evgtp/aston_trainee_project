@@ -1,17 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import Header from "./components/Header/Header";
+import Header from "./components/Header";
 import { lazy, Suspense } from "react";
-const HomePage = lazy(() => import("./components/Header/pages/HomePage"));
-const FavoritesPage = lazy(() =>
-  import("./components/Header/pages/FavoritesPage")
-);
-const HistoryPage = lazy(() => import("./components/Header/pages/HistoryPage"));
-const SignInPage = lazy(() => import("./components/Header/pages/SignInPage"));
-const SignUpPage = lazy(() => import("./components/Header/pages/SignUpPage"));
-const NotFoundPage = lazy(() =>
-  import("./components/Header/pages/NotFoundPage")
-);
+const HomePage = lazy(() => import("./pages/HomePage"));
+const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
+const HistoryPage = lazy(() => import("./pages/HistoryPage"));
+const SignInPage = lazy(() => import("./components/AuthModule/SignInPage"));
+const SignUpPage = lazy(() => import("./components/AuthModule/SignUpPage"));
+const DetailedCutaway = lazy(() => import("./pages/DetailedCutaway"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   return (
@@ -24,6 +20,7 @@ function App() {
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
+          <Route path="/detailed-cutaway" element={<DetailedCutaway />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Logo from "../../assets/image/logo.png";
-import AuthModule from "./AuthModule";
+import AuthModule from "../AuthModule/AuthModule";
 import HeaderNav from "./HeaderNav";
 
 import "./Header.css";
