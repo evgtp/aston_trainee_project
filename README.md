@@ -20,6 +20,8 @@
 
 - Есть применение lazy + Suspense [App](./src/App.js)
 
+- не сделано применение предохранителя
+
 # Redux
 
 - Использован Redux Toolkit
@@ -27,6 +29,10 @@
 - Использованы слайсы [paginationSlice](./src/store/slices/paginationSlice.js), [userSlice](./src/store/slices/userSlice.js)
 
 - У меня такая апишка, что особо “готовить” в данных нечего, будет достаточно простой функции, которая залезет в свойство ответа от сервера. [Character](./src/components/Characters.jsx)
+
+- не сделано хотя бы одна кастомная мидлвара (store ⇒ next ⇒ action ⇒ {} или createListenerMiddleware )
+
+- не сделано RTK Query
 
 # 2 уровень (необязательный)
 
