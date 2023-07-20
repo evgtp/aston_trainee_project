@@ -6,6 +6,7 @@ import inFavorites from "../assets/image/in_favorites.svg";
 import { useAuth } from "../Hooks/use-auth";
 import { Link } from "react-router-dom";
 import { addFavorite } from "../store/slices/userSlice";
+import PropTypes from "prop-types";
 
 function Cutaway({ id, image, name, species, status }) {
   const dispatch = useDispatch();
@@ -161,5 +162,13 @@ function Cutaway({ id, image, name, species, status }) {
     </>
   );
 }
+
+Cutaway.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+};
 
 export default Cutaway;

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useState, useEffect } from "react";
 import { addFavorite } from "../store/slices/userSlice";
+import PropTypes from "prop-types";
 
 function Detail({
   id,
@@ -121,7 +122,6 @@ function Detail({
                 style={{
                   position: "absolute",
                   right: "13px",
-                  bottom: "11px",
                 }}
               >
                 Add to favorites
@@ -169,5 +169,16 @@ function Detail({
     </div>
   );
 }
+
+Detail.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+  gender: PropTypes.string,
+  location: PropTypes.string,
+  origin: PropTypes.string,
+};
 
 export default Detail;
