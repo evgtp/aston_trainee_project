@@ -6,24 +6,24 @@
 
 - Есть разделение на умные и глупые компоненты
 
-- Есть рендеринг списков `Characters`, `FavoritesPage`
+- Есть рендеринг списков [Characters](./src/components/Characters.jsx), [FavoritesPage](./src/pages/FavoritesPage.jsx)
 
-- Реализованы формы `SignInPage`, `SignUpPage`
+- Реализованы формы [SignInPage](./src/components/AuthModule/SignInPage.jsx), [SignUpPage](./src/components/AuthModule/SignUpPage.jsx)
 
-- Есть кастомный хук `Hooks`
+- Есть кастомный хук [Hooks](./src/Hooks/use-auth.jsx)
 
-- Поиск не триггерит много запросов к серверу `SearchBlock`
+- Поиск не триггерит много запросов к серверу [SearchBlock](./src/components/SearchBlock.jsx)
 
-- Есть применение lazy + Suspense `App`
+- Есть применение lazy + Suspense [App](./src/App.js)
 
 # Redux
 
 - Использован Redux Toolkit
 
-- Использованы слайсы `slices`
+- Использованы слайсы [paginationSlice](./src/store/slices/paginationSlice.js), [userSlice](./src/store/slices/userSlice.js)
 
 # 2 уровень (необязательный)
 
-- Использование Firebase для учетных записей пользователей `SignInPage`, `SignUpPage`
+- Использование Firebase для учетных записей пользователей [SignInPage](./src/components/AuthModule/SignInPage.jsx), [SignUpPage](./src/components/AuthModule/SignUpPage.jsx)
 
 - Настроен CI/CD.
